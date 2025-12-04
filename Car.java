@@ -1,52 +1,16 @@
-package OOPConceptPart1;
+package OOPConceptPart2;
 
-public class Car {
-	
-	//class variables or global variables
-	int mod;
-	int wheel;
+public class Car extends Vehicle{
 
-	public static void main(String[] args) {
-		
-		//new Car() ---> this is the object of Car class
-		//new keyword is used to create the object
-		//a,b,c ----> Object reference variables
-		
-		Car a = new Car();
-		Car b = new Car();
-		Car c = new Car();
-		
-		a.mod = 2015;
-		a.wheel = 4;
-		
-		b.mod = 2014;
-		b.wheel = 4;
-		
-		c.mod = 2013;
-		c.wheel = 4;
-		
-		System.out.println("before assigning the references");
-		
-		System.out.println(a.mod);
-		System.out.println(a.wheel);
-		
-		System.out.println(b.mod);
-		System.out.println(b.wheel);
-		
-		System.out.println(c.mod);
-		System.out.println(c.wheel);
-		
-		System.out.println("after shifting the references");
-		
-		a=b;
-		b=c;
-		c=a;
-		
-		a.mod = 10;
-		System.out.println(a.mod);
-		c.mod = 20;
-		System.out.println(a.mod);
-		System.out.println(c.mod);
+	public void start() {
+		System.out.println("Car---start");
 	}
-
+	
+	public void stop() {
+		System.out.println("Car---stop");
+	}
+	
+	public void refuel() {
+		System.out.println("Car---refuel");
+	}
 }
